@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rumble - Browser Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header>
+        <h1>Rumble Demo</h1>
+        <p class="tagline">2D arena prototype – play a text-first round directly in your browser.</p>
+      </header>
+      <section class="controls">
+        <div class="field">
+          <label for="character">Player</label>
+          <select id="character"></select>
+        </div>
+        <div class="field">
+          <label for="opponent">Opponent</label>
+          <select id="opponent"></select>
+        </div>
+        <div class="field">
+          <label for="arena">Arena</label>
+          <select id="arena"></select>
+        </div>
+        <div class="actions">
+          <button id="start">Start Match</button>
+          <button id="restart" disabled>Restart</button>
+        </div>
+      </section>
+      <section class="status">
+        <div class="status-row"><strong>State:</strong> <span id="state">Idle</span></div>
+        <div class="status-row"><strong>Round:</strong> <span id="round">-</span></div>
+        <div class="status-row"><strong>HUD:</strong> <span id="hud">-</span></div>
+        <div class="status-row"><strong>Pause Menu:</strong> <span id="pause">Press P/Escape to pause</span></div>
+        <div class="status-row"><strong>Result:</strong> <span id="result">-</span></div>
+      </section>
+      <section class="help">
+        <h2>Keyboard</h2>
+        <ul>
+          <li>A / Left Arrow – Move Left</li>
+          <li>D / Right Arrow – Move Right</li>
+          <li>W / Space – Jump</li>
+          <li>J – Light Attack</li>
+          <li>K – Heavy Attack</li>
+          <li>S – Block</li>
+          <li>P or Escape – Pause/Resume</li>
+        </ul>
+      </section>
+      <section class="log">
+        <h2>Round Log</h2>
+        <div id="log" class="log-entries"></div>
+      </section>
+    </main>
+    <script type="module" src="./assets/web.js"></script>
+  </body>
+</html>
